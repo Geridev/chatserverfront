@@ -33,7 +33,6 @@ export default {
           rmsg: obj.msg,
           name: obj.UserName.name,
         })
-        ws.close();
       }
     })
     return {
