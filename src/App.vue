@@ -27,6 +27,9 @@ export default {
     }
 
     onMounted(() => {
+      ws.onopen = () => {
+        console.log("connected");
+      }
       ws.onmessage = (msg) => {
         let obj = JSON.parse(msg.data);
         state.message.push({
